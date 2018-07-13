@@ -1,0 +1,533 @@
+\documentclass[10pt]{article}
+\usepackage{pictex,amsmath,amssymb,amsfonts,amsthm,verbatim}
+\usepackage{graphics}
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{algorithm,algorithmic}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+
+\setlength{\voffset}{-0.25in}
+\setlength{\headsep}{+0.5in}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\def\vu{\mathbf{u}}
+\def\vv{\mathbf{v}}
+\def\vb{\mathbf{b}}
+\def\vw{\mathbf{w}}
+\def\vs{\mathbf{s}}
+
+\renewcommand{\implies}{\rightarrow}
+\renewcommand{\lor}{\vee}
+\renewcommand{\land}{wedge}
+\renewcommand{\iff}{\leffrightarrow}
+\newcommand{\TRUE}{\mathbf{T}}
+\newcommand{\FALSE}{\mathbf{F}}
+\newcommand{\universe}{\mathcal{U}}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amsmath}
+\usepackage[utf8]{vietnam}
+
+\newmdenv[linecolor=blue,skipabove=\topsep,skipbelow=\topsep,leftmargin=5pt,rightmargin=-5pt,innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+
+
+\begin{document}
+
+\begin{center}
+	Physics 2
+\end{center}
+
+\section{Periodic Motion}
+
+\subsection{Component in Periodic Motion: }
+\includegraphics[scale = 0.5]{hinh}
+\bigbreak
+	\begin{enumerate}
+		%1
+		\item \textbf{Displacement: } x is the x-component of the displacement of the body from the equilibrium and is also the change in the length of the spring. \\
+		%2
+		\item \textbf{Restoring Force: } whenever the body is displaced from its equilibrium position, the spring exert the \textbf{restoring force} to \textbf{restore} it to the equilirium position. 
+		%3
+		\item \textbf{Amplitude: } The amplitude of the motion, denoted by A, is the maximum magnitude of displacement from equilirium, tha maximum value of |x|. It is always positive. \\
+		\begin{itemize}
+			\item  The SI unit of A is meter.
+			\item A complete vibration of \textbf{cycle} is one complete round trip: from A to -A and back to A, or from O to A, back through to -A, and back to O. \\
+		\end{itemize}
+		%4
+		\item \textbf{The Period: } (T) is the time to complete a cycle. \\
+		\begin{itemize}
+			\item It is always positve.
+			\item The SI unit is second, or ``seconds per cycle''
+		\end{itemize}
+		%5
+		\item \textbf{The Frequency: } (f) is the number of cycles in a unit of time.
+		\begin{itemize}
+			\item It is always positive. 
+			\item The SI unit is \textit{hertz} (Hz). \\
+			\begin{mybox}
+				\begin{center}
+					1 hertz = 1 Hz = 1 cycle/s = 1 $s^{-1}$
+				\end{center}
+			\end{mybox}
+		\end{itemize}
+		%6
+		\item \textbf{Angular Frequency: } ($\omega$) is $2 \pi$ times the frequency. \\
+		\begin{mybox}
+			\begin{center}
+				$\omega = 2 \pi f$
+			\end{center}
+		\end{mybox}
+		\bigbreak
+	\end{enumerate}
+
+\bigbreak
+\subsection{Simple Harmonic Motion} (SHM)
+``The simplest kind of oscillation occurs when the restoring force $F_{x}$ is \textit{drectly proportional} to the displacement from equilibrium x'' \\
+
+	\begin{enumerate}
+		%1
+		\item \textbf{Restoring Force exerted by an ideal spring:} (there is no friction) \\
+		\begin{mybox}
+			\begin{center}
+				$F_{x} = -kx$
+			\end{center}
+		\end{mybox}
+
+		Whether: \\
+		\begin{itemize}
+			\item k is constant force (N/m)
+			\item x is displacement. (m)
+		\end{itemize}
+
+		\includegraphics[scale = 0.4]{hinh1}
+		\bigbreak
+
+		\begin{itemize}
+			\item The acceleration and displacement in SHM always have opposite signs. And this \textit{acceleration} is not constant.
+			\item Not all periodic motions are simple harmonic.
+			\item In simple harmonic the restoring force is proportional to displacement.
+		\end{itemize}
+
+		- Some structure: \\
+		\begin{mybox}
+			\begin{center}
+				$\omega = \sqrt{\dfrac{k}{m}}$
+			\end{center}
+		\end{mybox}
+		where: \\
+			$$
+			\begin{cases}
+				\omega \mbox{ is angular frequency (rad/s)} \\
+				k \mbox{ is force constant (N/m)} \\
+				m \mbox{ is mass of object (kg)} \\
+			\end{cases}
+			$$
+
+		\bigbreak
+		%2
+		\item \textbf{Relation between frequency and period: } \\
+		\begin{mybox}
+			\begin{center}
+				$f = \dfrac{\omega}{2 \pi} = \dfrac{1}{2 \pi} \sqrt{\dfrac{k}{m}}$
+				\bigbreak
+				$T = \dfrac{1}{f} = \dfrac{2 \pi} {\omega} = 2 \pi \sqrt{\dfrac{m}{k}}$
+			\end{center}
+		\end{mybox}
+		\bigbreak
+		\begin{itemize}
+			\item The period and frequency of simple harmonic are completetely determined by the mass \textit{m} and the force constant \textit{k}.
+			\item In simple harmonic motion the period and frequency do not depend on the amplitude A.
+			\item The change of amplitude \textit{A} will lead to the change of the value of |x|, restoring force and the average speed. 
+		\end{itemize}
+
+		\bigbreak
+		%3
+		\item \textbf{Displacement, Velocity and Acceleration in SHM: } \\
+		\textbf{Displacement in simple harmonic: } \\
+		\begin{mybox}
+			\begin{center}
+				$x = Acos(\omega t + \phi)$
+			\end{center}
+		\end{mybox}
+		Where:
+		$$
+		\begin{cases}
+			x \mbox{ is displacment (m)} \\
+			A \mbox{ is amplitude (m)} \\
+			\omega \mbox{ is angular frequency (rad/s)} \\
+			\phi \mbox{ is phase angle (rad)} \\
+		\end{cases}
+		$$
+		\bigbreak
+		\textit{In simple harmornic motion the displacement is a periodic, \textbf{sinusoidal} function of time.}
+
+		\bigbreak
+		\textbf{Velocity in Harmonic Motion: } \\
+		\begin{mybox}
+			\begin{center}
+				$v_{x} = \dfrac{dx}{dt} = - \omega A sin(\omega t + \phi)$
+			\end{center}
+		\end{mybox}
+		\bigbreak
+		\textbf{Acceleration in Harmonic Motion: } \\
+		\begin{mybox}
+			\begin{center}
+				$a_{x} = \dfrac{dv}{dt} = - \omega^{2} A cos(\omega t + \phi)$
+			\end{center}
+		\end{mybox}
+
+		\bigbreak
+		\textbf{The maximum speed in SHM: } \\
+		\begin{mybox}
+			\begin{center}
+				$v_{max} = \omega A$ 
+			\end{center}
+		\end{mybox}
+
+		\bigbreak
+		\textbf{The maximum acceleration in SHM: } \\
+		\begin{mybox}
+			\begin{center}
+				$a_{max} = \omega^{2} A$
+			\end{center}
+		\end{mybox}
+
+		\textit{When a body is passing through the equilibrium position so that x = 0, the velocity equals its maximum value $v_{max}$ or $-v_{max}$ (depend on which way the body is moving) and the acceleration is zero.} \\
+		\textit{When a body is at its most positive displacement or most negative position, the velocity is zero and the body is instantaneously at rest. At these point the resotring force $F_{x} = -kx$ and the accleration have its maximum value.} \\
+
+		\bigbreak
+		\textbf{Find phase angle at intial time: } \\
+		We have: \\
+		\begin{center}
+			$v_{0x} = - \omega A sin \phi$ \\
+			$x_{0} = A cos \phi$
+		\end{center} 
+
+		$\rightarrow \dfrac{v_{0x}}{x_{0}} = \dfrac{- \omega A sin \phi}{A cos \phi}$ \\
+		$\rightarrow \phi = arctan (- \dfrac{v_{0x}}{\omega x_{0}})$ \\
+
+		\bigbreak
+		\textbf{To find the amplitude A in SHM: } \\
+		\begin{mybox}
+			\begin{center}
+				$A = \sqrt{x_{0}^{2} + \dfrac{v_{0x}^{2}}{\omega^{2}}}$
+			\end{center}
+		\end{mybox}
+
+		\bigbreak
+		Or: \\
+		\begin{mybox}
+			\begin{center}
+				$A = \sqrt{\dfrac{a^2}{\omega^{4}} + \dfrac{v_{0x}^{2}}{\omega^{2}}}$
+			\end{center}
+		\end{mybox}
+	\end{enumerate}
+
+\subsection{Energy in Simple Harmonic Motion: } 
+\textit{Since only horizontal force is the conservative force exerted by an ideal spring and the vertival do no work so total mechanical energy of the system is conserved.} \\
+	\begin{mybox}
+		\begin{center}
+			$E = \dfrac{1}{2} m v_{x}^{2} + \dfrac{1}{2} k x^{2} = \dfrac{1}{2} k A^{2}$
+		\end{center}
+	\end{mybox}
+	For: \\
+	$$
+	\begin{cases}
+		E \mbox{ is total mechanical energy (J)} \\
+		m \mbox{ is velocity (m/s)} \\
+		k \mbox{ is force constant (N/m)} \\
+		x \mbox{ is displacement (m)} \\
+		A \mbox{ is amplitude (m)}
+	\end{cases}
+	$$
+
+	\includegraphics[scale = 0.4]{hinh2}
+	\bigbreak
+
+	\begin{mybox}
+		\begin{center}
+			$v_{x} = \omega \sqrt{A^{2} - x^{2}}$
+		\end{center}
+	\end{mybox}
+
+\subsection{Simple Pendulum}
+\textit{A simple pendulum is an idealized model consisting of a point mass suspended by a massless, unstretchable string. When a point mass pulled to one side of its straight-down equilibrium position and released, it osccilates about the equilibrium position.} \\
+
+\includegraphics[scale = 0.5]{hinh3}
+\bigbreak
+
+\begin{enumerate}
+	%1
+	\item \textbf{Restoring Force:} is the tangential component of the net force. \\
+	\begin{mybox}
+		\begin{center}
+			$F_{0} = -mg sin \theta$
+		\end{center}
+	\end{mybox}
+
+	\begin{itemize}
+		\item Gravity provides the restoring force $F_{0}$.
+		\item The tension \textit{T} merely acts to make the point mass move in the arc.
+		\item Since $F_{0}$ is proportional to $sin \theta$, so the motion is not simple harmonic, but if the angle $\theta$ is small ($< 10 \degree$), the pendulum is now in simple harmonic:\\
+		\begin{mybox}
+			\begin{center}
+				$F_{0} = -mg \theta = -mg \dfrac{x}{L}  = -\dfrac{mg}{L} x$
+			\end{center}
+		\end{mybox}
+		For: \\
+		\begin{mybox}
+			\begin{center}
+				$k = \dfrac{mg}{L}$
+			\end{center}
+			For: L is the length of the pendulum
+		\end{mybox}
+	\end{itemize}
+
+	%2
+	\item \textbf{Angular Frequency: } \\
+	\begin{mybox}
+		\begin{center}
+			$\omega = \sqrt{\dfrac{k}{m}} = \sqrt{\dfrac{mg / L}{m}} = \sqrt{\dfrac{g}{L}}$
+		\end{center}
+	\end{mybox}
+
+	%3
+	\item \textbf{Frequency of Simple Pendulum: } \\
+	\begin{mybox}
+		\begin{center}
+			$f = \dfrac{1}{2 \pi} \sqrt{\dfrac{g}{L}}$
+		\end{center}
+	\end{mybox}
+
+	%4
+	\item \textbf{Period of Simple Pendulum: } \\
+	\begin{mybox}
+		\begin{center}
+			$T = 2 \pi \sqrt{\dfrac{L}{g}}$
+		\end{center}
+	\end{mybox}
+
+	\begin{itemize}
+		\item The change of g ($\uparrow$) leads to ($\uparrow$) of the restoring force, the frequency and ($\downarrow$) of the period.
+		\item The motion of pendulum is only \textbf{approximately} simple harmonic.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Physical Pendulum}
+\textit{A physical pendulum is any \textbf{real} pendulum. When a body is displaced from equilibrium by and angle $\theta$, the distance from O to the center of gravity is \textbf{d}, the moment of inertia of the body is \textbf{I}.} \\
+
+\includegraphics[scale = 0.7]{hinh4}
+\bigbreak
+
+\textbf{The restoring torque of physical pendulum: } \\
+\begin{mybox}
+	\begin{center}
+		$\tau  = -mg (d sin \theta)$
+	\end{center}
+\end{mybox}
+
+- When $\theta$ is small ($< 10 \degree$) the motion of physical pendulum can be approximately harmonic motion. \\
+\begin{mybox}
+	\begin{center}
+		  $\tau  = -mg (d \theta)$
+	\end{center}
+\end{mybox}
+
+\begin{enumerate}
+	%1
+	\item \textbf{Angular Frequency: } \\
+	\begin{mybox}
+		\begin{center}
+			$\omega = \sqrt{\dfrac{mgd}{I}}$
+		\end{center}
+	\end{mybox}
+	\bigbreak
+
+	\begin{mybox}
+		\begin{center}
+			$T = 2 \pi \sqrt{\dfrac{I}{mgd}}$
+		\end{center}
+	\end{mybox}
+	For: \\
+	$$
+	\begin{cases}
+		m \mbox{ is mass (kg)} \\
+		g \mbox{ is accleration due to gravity } (m/s^2) \\
+		I \mbox{ is moment of inertia } (kg.m^2) \\
+	\end{cases}
+	$$
+\end{enumerate}
+
+\subsection{Damped oscillation}
+\textit{The oscillation that its amplitude is decreased gradually form time to time is called damped oscillation.}
+\begin{enumerate}
+	%1
+	\item \textbf{Displacement of Damped oscillation: } \\
+	\begin{mybox}
+		\begin{center}
+			$x = Ae^{-(b / 2m)t} cos( \omega ' t + \phi)$
+		\end{center}
+	\end{mybox}
+	For: \\
+	$$
+	\begin{cases}
+	x \mbox{ is displacement (m)} \\
+	A \mbox{ is initial amplitude (m)} \\
+	b \mbox{ is damping constant} \\
+	m \mbox{ is mass (kg)} \\
+	\omega' \mbox{ is angular frequency of damped oscillation (rad/s)} \\
+	\end{cases}
+	$$
+	%2
+	\item \textbf{Angular Frequency: } \\
+	\begin{mybox}
+		\begin{center}
+			$\omega '  = \sqrt{\dfrac{k}{m} - \dfrac{b^{2}}{4 m^{2}}}$
+		\end{center}
+	\end{mybox}
+
+	\begin{itemize}
+		\item When $\omega'$ = 0:
+		\begin{mybox}
+			\begin{center}
+				 $\dfrac{k}{m} - \dfrac{b^{2}}{4 m^{2}} \mbox{ or } b = \sqrt{km}$
+			\end{center}
+		\end{mybox}
+		\item At this time, the condition is called \textbf{critical damping}. The system is no longer oscillates but returns to its equilibrium position.
+		\item If $b > 2 \sqrt{km}$, the condiiton is now \textbf{overdamping}. The system is no longer oscillates, but it returns to equlibrium more slowly than \textbf{critical damping}. \\
+		\includegraphics[scale = 0.4]{hinh5}
+		\item When b is less than the critical value, the condition is now \textbf{underdamping}. The system oscilates with steadily decreasing amplitude.
+	\end{itemize}
+
+\bigbreak
+\subsection{Energy in Damped Oscillation}
+\textit{In damped oscillation, the damping force is non-conservative; the mechanical energy of the system is not constant but decrease continously, aproaching zero after a long time}. 
+\begin{mybox}
+	\begin{center}
+		$\dfrac{dE}{dt} = -b v_{x}^{2}$
+	\end{center}
+\end{mybox}
+\end{enumerate}
+
+\bigbreak
+\subsection{Forced Oscillations and Resonance}
+\begin{enumerate}
+	%1
+	\item \textbf{Forced Oscillation:} (Damped Oscillation with a Periodic Driving Force) \\
+	\begin{itemize}
+		\item If we apply a \textbf{periodic driving force} with angular frequency $\omega_{d}$ to a damped harmornic oscillator, the motion that results is called \textbf{a forced oscillation} or \textbf{driven oscillation.}
+		\item The value of $\omega_{d}$ is independent with the natural $\omega$.
+		\item When $\omega_{d} = \omega$, the driven force is working with: \\
+		\begin{center}
+			$F(t) = F_{max} cos \omega_{d} t$
+		\end{center}
+		\item \textbf{Amplitude of a forced oscillator:} \\
+		\begin{mybox}
+			\begin{center}
+				$A = \dfrac{F_{max}}{\sqrt{(k - m \omega_{d}^{2}})^{2} + b^{2} \omega_d^{2}}$
+			\end{center}
+		\end{mybox}
+	\end{itemize}
+	%2
+	\item \textbf{Resonance: }
+	\begin{itemize}
+		\item When angular frequency at driving force $\omega_{d}$ equals to the natural angular frequency $\omega_{0}$, that condition is called \textbf{resonance}.
+	\end{itemize}
+\end{enumerate}
+\bigbreak
+
+					%-----------------------------------------------%
+\section{Mechanical Wave}
+\textit{A mechanical wave is a disturbance that travels through some material or substance called the \textbf{medium} for the wave.}
+\begin{enumerate}
+	%1
+	\item \textbf{Tranverse wave:} (Sóng ngang) is a moving wave that consists of oscillations occuring \textbf{perpendicular} to the direction of energy transfer (or the propagation of the wave).
+	%2
+	\item \textbf{Longitudinal wave:} (Sóng dọc) is a moving wave that the oscillation is the same direction with the propagation of the wave.
+\end{enumerate}
+
+\subsection{Periodic Wave:}
+\textbf{Periodic Tranverse Waves:} \\
+\begin{itemize}
+	\item There is different between wave motion and particle motion: In wave motion, the wave moves with \textbf{constant speed} along the string, while the motion of the particle is \textbf{simple harmonic} and \textbf{perpendicular} to the length of the string.
+\end{itemize}
+
+\begin{enumerate}
+	%1
+	\item \textbf{Wave length:} ($\lambda$) of the wave is the distance from the one crest(đỉnh sóng) to the next, or one trough (bụng sóng) to the next, or from any point to the corresponding point of the next wave shape. \\
+	\begin{mybox}
+		\begin{center}
+			$v = \lambda f = \dfrac{\lambda}{T}$
+		\end{center}
+	\end{mybox}
+	For: \\
+	$$
+	\begin{cases}
+		v \mbox{ is wave speed (m/s)} \\
+		\lambda \mbox{ is wave length (m)} \\
+		f \mbox{ is frequency (Hz)} \\
+		T \mbox{ is period (s)} \\
+	\end{cases}
+	$$
+	\begin{itemize}
+		\item The wave speed v is determined entirely by the property of the medium not $\lambda$ and $f$
+	\end{itemize}
+\end{enumerate}
+
+\bigbreak
+\subsection{Mathematical Description of a Wave}
+\textbf{Wave function of the Sinusoidal wave:}
+\begin{enumerate}
+	%1
+	\item \textbf{Wave function for the Sinusodial wave in x+ direction:}
+\begin{mybox}
+	\begin{center}
+		$y(x, t) = A cos \left[2 \pi \left(\dfrac{x}{\lambda} - \dfrac{t}{T} \right) \right]$
+	\end{center}
+\end{mybox}
+Or: \\
+\begin{mybox}
+	\begin{center}
+		$y(x, t) = A cos(kx - \omega t)$ \\
+	\end{center}
+\end{mybox}
+	%2
+	\item \textbf{Wave function for the Sinusodial wave in x- direction:}
+	\begin{mybox}
+	\begin{center}
+		$y(x, t) = A cos \left[2 \pi \left(\dfrac{x}{\lambda} + \dfrac{t}{T} \right) \right]$
+	\end{center}
+\end{mybox}
+Or: \\
+\begin{mybox}
+	\begin{center}
+		$y(x, t) = A cos(kx + \omega t)$ \\
+	\end{center}
+\end{mybox}
+
+\end{enumerate}
+
+For: k is a \textbf{wave number}. And: \\
+\begin{mybox}
+	\begin{center}
+		$k = \dfrac{2 \pi}{\lambda}$
+	\end{center}
+\end{mybox}
+
+\bigbreak
+We also have: \\
+\begin{mybox}
+	\begin{center}
+		$\omega = vk$ \textbf{or} $v = \dfrac{\omega}{k}$
+	\end{center}
+\end{mybox}
+
+\end{document}
+
+	
